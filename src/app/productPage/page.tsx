@@ -8,8 +8,8 @@ export default function ProductPage() {
     const searchParams = useSearchParams()
     
     // Getting URL params data 
-    const owner = searchParams.get('owner')
-    const url = searchParams.get('url')
+    const owner = searchParams.get('owner') || ""
+    const url = searchParams.get('url') || ""
     // console.log(JSON.parse(data))
     
     return (
