@@ -1,3 +1,13 @@
+## Using 
+
+* https://localforage.github.io/localForage/
+* https://recoiljs.org/docs/introduction/installation
+
+Passing data between pages:
+* https://stackoverflow.com/questions/72221255/how-to-pass-data-from-one-page-to-another-page-in-next-js 
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
