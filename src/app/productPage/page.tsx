@@ -1,18 +1,19 @@
 'use client'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from '../../../node_modules/next/router';
+import { Suspense } from 'react'
 
-
-export default function ProductPage() {
+function IndexComp() {
     // const router = useRouter();
     const searchParams = useSearchParams()
-    
+
     // Getting URL params data 
     const owner = searchParams.get('owner') || ""
     const url = searchParams.get('url') || ""
     // console.log(JSON.parse(data))
-    
-    return (
+
+    return <>
+
         <main id="main-p" className="w-full h-dvh overflow-y-auto">
             {/* Nav to hold back button */}
             <div className="h-30 w-full p-4 ">
@@ -21,7 +22,7 @@ export default function ProductPage() {
                         window.location.href = "/"
                     }}>Back</button>
             </div>
-            
+
             {/* Element to show product (Image) */}
             <div
                 className="flex flex-col w-full h-3/5 md:w-1/2 border-2 p-1 mb-5 m-auto rounded-md">
@@ -35,5 +36,15 @@ export default function ProductPage() {
                 </div>
             </div>
         </main>
+
+    </>
+}
+
+export default function ProductPage() {
+
+    return (
+        <Suspense>
+            <IndexComp />
+        </Suspense>
     );
 }
